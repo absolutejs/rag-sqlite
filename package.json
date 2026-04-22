@@ -1,6 +1,6 @@
 {
   "name": "@absolutejs/absolute-rag-sqlite",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "SQLite adapter package for AbsoluteJS RAG workflows with optional native vec0 acceleration",
   "license": "BSL-1.1",
   "type": "module",
@@ -29,7 +29,7 @@
     "format:check": "prettier --check ."
   },
   "peerDependencies": {
-    "@absolutejs/rag": ">=0.0.2 <0.1.0"
+    "@absolutejs/rag": ">=0.0.3 <0.1.0"
   },
   "optionalDependencies": {
     "@absolutejs/absolute-rag-sqlite-darwin-arm64": "0.0.2",
