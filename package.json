@@ -23,10 +23,9 @@
     "vendor:binaries": "node ./scripts/vendor-sqlite-vec.mjs",
     "pack": "bun pm pack",
     "publish:all": "node ./scripts/publish-all.mjs",
-    "release:package": "bun publish --access public",
     "lint": "eslint . --max-warnings 0",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "release": "bun publish --access public"
   },
   "peerDependencies": {
     "@absolutejs/rag": ">=0.0.3 <0.1.0"
