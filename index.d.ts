@@ -4,17 +4,18 @@ import type {
   RAGVectorStore,
   RAGVectorStoreStatus,
   SQLiteRAGStoreOptions,
-  SQLiteVecResolution
-} from '@absolutejs/rag';
+  SQLiteVecResolution,
+} from "@absolutejs/rag";
 import {
   createRAGCollection,
   createSQLiteRAGStore as createCoreSQLiteRAGStore,
   ragPlugin,
   resolveAbsoluteSQLiteVec,
-  resolveAbsoluteSQLiteVecExtensionPath
-} from '@absolutejs/rag';
+  resolveAbsoluteSQLiteVecExtensionPath,
+} from "@absolutejs/rag";
 
-export declare const ABSOLUTE_SQLITE_RAG_PACKAGE_NAME = "@absolutejs/absolute-rag-sqlite";
+export declare const ABSOLUTE_SQLITE_RAG_PACKAGE_NAME =
+  "@absolutejs/absolute-rag-sqlite";
 
 export type SQLiteRAGCollectionOptions = {
   store?: RAGVectorStore;
@@ -47,17 +48,23 @@ export type SQLiteRAG = {
 };
 
 export declare const createSQLiteRAGStore: typeof createCoreSQLiteRAGStore;
-export declare const createSQLiteRAGCollection: (options?: SQLiteRAGCollectionOptions) => RAGCollection;
+export declare const createSQLiteRAGCollection: (
+  options?: SQLiteRAGCollectionOptions,
+) => RAGCollection;
 export declare const createSQLiteRAG: (options?: SQLiteRAGOptions) => SQLiteRAG;
 export declare const createSQLiteRAGBackend: typeof createSQLiteRAG;
 export declare const getSQLiteRAGNativeSupport: typeof resolveAbsoluteSQLiteVec;
-export declare const summarizeSQLiteRAGSupport: (target?: Pick<RAGCollection, 'getStatus' | 'getCapabilities'> | Pick<RAGVectorStore, 'getStatus' | 'getCapabilities'>) => SQLiteRAGSupportSummary;
+export declare const summarizeSQLiteRAGSupport: (
+  target?:
+    | Pick<RAGCollection, "getStatus" | "getCapabilities">
+    | Pick<RAGVectorStore, "getStatus" | "getCapabilities">,
+) => SQLiteRAGSupportSummary;
 
 export {
   createRAGCollection,
   ragPlugin,
   resolveAbsoluteSQLiteVec,
-  resolveAbsoluteSQLiteVecExtensionPath
+  resolveAbsoluteSQLiteVecExtensionPath,
 };
 
 export type {
@@ -66,5 +73,5 @@ export type {
   RAGVectorStore,
   RAGVectorStoreStatus,
   SQLiteRAGStoreOptions,
-  SQLiteVecResolution
+  SQLiteVecResolution,
 };

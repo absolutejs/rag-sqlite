@@ -42,16 +42,16 @@ const rag = createSQLiteRAG({
   storeOptions: {
     path: "./rag.sqlite",
     native: {
-      mode: "vec0"
-    }
-  }
+      mode: "vec0",
+    },
+  },
 });
 
 app.use(
   ragPlugin({
     path: "/rag",
-    collection: rag.collection
-  })
+    collection: rag.collection,
+  }),
 );
 ```
 

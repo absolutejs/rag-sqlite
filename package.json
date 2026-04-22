@@ -23,7 +23,10 @@
     "vendor:binaries": "node ./scripts/vendor-sqlite-vec.mjs",
     "pack": "bun pm pack",
     "publish:all": "node ./scripts/publish-all.mjs",
-    "release:package": "bun publish --access public"
+    "release:package": "bun publish --access public",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "peerDependencies": {
     "@absolutejs/rag": ">=0.0.2 <0.1.0"
@@ -37,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/absolutejs/absolute-rag-sqlite.git"
+    "url": "https://github.com/absolutejs/rag-sqlite.git"
   },
   "keywords": [
     "absolutejs",
@@ -48,5 +51,14 @@
   ],
   "sqliteVec": {
     "version": "0.1.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.3",
+    "globals": "^17.4.0",
+    "prettier": "^3.5.3"
   }
 }
