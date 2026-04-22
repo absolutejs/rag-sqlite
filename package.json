@@ -1,0 +1,52 @@
+{
+  "name": "@absolutejs/absolute-rag-sqlite",
+  "version": "0.0.4",
+  "description": "SQLite adapter package for AbsoluteJS RAG workflows with optional native vec0 acceleration",
+  "license": "BSL-1.1",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "README.md",
+    "index.js",
+    "index.d.ts"
+  ],
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    }
+  },
+  "scripts": {
+    "check": "node ./scripts/check-release.mjs",
+    "vendor:binaries": "node ./scripts/vendor-sqlite-vec.mjs",
+    "pack": "bun pm pack",
+    "publish:all": "node ./scripts/publish-all.mjs",
+    "release:package": "bun publish --access public"
+  },
+  "peerDependencies": {
+    "@absolutejs/rag": ">=0.0.2 <0.1.0"
+  },
+  "optionalDependencies": {
+    "@absolutejs/absolute-rag-sqlite-darwin-arm64": "0.0.2",
+    "@absolutejs/absolute-rag-sqlite-darwin-x64": "0.0.2",
+    "@absolutejs/absolute-rag-sqlite-linux-arm64": "0.0.2",
+    "@absolutejs/absolute-rag-sqlite-linux-x64": "0.0.2",
+    "@absolutejs/absolute-rag-sqlite-windows-x64": "0.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/absolutejs/absolute-rag-sqlite.git"
+  },
+  "keywords": [
+    "absolutejs",
+    "rag",
+    "sqlite",
+    "vector",
+    "sqlite-vec"
+  ],
+  "sqliteVec": {
+    "version": "0.1.9"
+  }
+}

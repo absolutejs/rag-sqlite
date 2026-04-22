@@ -1,0 +1,17 @@
+{
+  "name": "@absolutejs/absolute-rag-sqlite-windows-arm64",
+  "version": "0.0.1",
+  "description": "Platform-native sqlite-vec binding for AbsoluteJS RAG SQLite (windows arm64)",
+  "license": "BSL-1.1",
+  "os": ["win32"],
+  "cpu": ["arm64"],
+  "files": [
+    "README.md",
+    "sqlite-vec.dll"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/absolutejs/absolute-rag-sqlite.git",
+    "directory": "native/packages/windows-arm64"
+  }
+}
